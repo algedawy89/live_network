@@ -1,0 +1,5 @@
+http://www.technomaster.pro/hls/cIlchannel1-stream.m3u8
+http://www.technomaster.pro/hls/cIlchannel2-stream.m3u8
+http://www.technomaster.pro/hls/cIlchannel3-stream.m3u8
+http://www.technomaster.pro/hls/cIlchannel4-stream.m3u8
+http://www.technomaster.pro/hls/cIlchannel5-stream.m3u8
