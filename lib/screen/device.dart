@@ -207,37 +207,37 @@ class _DeviceState extends State<Device> {
       String group;
 
 
-      if (shared_pr.getString(Conf.group.toString())!.isNotEmpty ||
-          shared_pr.getString(Conf.group.toString()) != null) {
-        group = shared_pr.getString(Conf.group.toString())!;
+      if (shared_pr.getString("group")!.isNotEmpty ||
+          shared_pr.getString("group") != null) {
+        group = shared_pr.getString("resolution")!;
       } else {
         group = selectedListgroup;
       }
 
-      if (shared_pr.getString(Conf.segment.toString())!.isNotEmpty ||
-          shared_pr.getString(Conf.segment.toString()) != null) {
-        segment = shared_pr.getString(Conf.segment.toString())!;
+      if (shared_pr.getString("segment")!.isNotEmpty ||
+          shared_pr.getString("segment") != null) {
+        segment = shared_pr.getString("segment")!;
       } else {
         segment = segementSelect;
       }
 
-      if (shared_pr.getString(Conf.videoDev.toString())!.isNotEmpty ||
-          shared_pr.getString(Conf.videoDev.toString()) != null) {
-        video = shared_pr.getString(Conf.videoDev.toString())!;
+      if (shared_pr.getString("videoDev")!.isNotEmpty ||
+          shared_pr.getString("videoDev") != null) {
+        video = shared_pr.getString("videoDev")!;
       } else {
         video = videselect!.label;
       }
 
-      if (shared_pr.getString(Conf.audioDev.toString())!.isNotEmpty ||
-          shared_pr.getString(Conf.audioDev.toString()) != null) {
-        audio = shared_pr.getString(Conf.audioDev.toString())!;
+      if (shared_pr.getString("audioDev")!.isNotEmpty ||
+          shared_pr.getString("audioDev") != null) {
+        audio = shared_pr.getString("audioDev")!;
       } else {
         audio = videselect!.label;
       }
 
-      if (shared_pr.getString(Conf.resolution.toString())!.isNotEmpty ||
-          shared_pr.getString(Conf.resolution.toString()) != null) {
-        selectedResolution = shared_pr.getString(Conf.resolution.toString())!;
+      if (shared_pr.getString("resolution")!.isNotEmpty ||
+          shared_pr.getString("resolution") != null) {
+        selectedResolution = shared_pr.getString("resolution")!;
       }
 
       theChannel = findKeyByValue(CHANNELS_MAP, channel!);

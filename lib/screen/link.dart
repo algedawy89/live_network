@@ -78,9 +78,9 @@ class _LinkState extends State<Link> {
 
       output = createdirectory(channel);
       try {
-        if (shared_pr.getString(Conf.resolution.toString())!.isNotEmpty ||
-            shared_pr.getString(Conf.resolution.toString()) != null) {
-          selectedResolution = shared_pr.getString(Conf.resolution.toString())!;
+        if (shared_pr.getString("resolution")!.isNotEmpty ||
+            shared_pr.getString("resolution") != null) {
+          selectedResolution = shared_pr.getString("resolution")!;
         } else {
           selectedResolution = '640x360';
         }
@@ -88,16 +88,16 @@ class _LinkState extends State<Link> {
         String segment;
         String group;
 
-        if (shared_pr.getString(Conf.group.toString())!.isNotEmpty ||
-            shared_pr.getString(Conf.group.toString()) != null) {
-          group = shared_pr.getString(Conf.group.toString())!;
+        if (shared_pr.getString("group")!.isNotEmpty ||
+            shared_pr.getString("group") != null) {
+          group = shared_pr.getString("group")!;
         } else {
           group = selectedListgroup;
         }
 
-        if (shared_pr.getString(Conf.segment.toString())!.isNotEmpty ||
-            shared_pr.getString(Conf.segment.toString()) != null) {
-          segment = shared_pr.getString(Conf.segment.toString())!;
+        if (shared_pr.getString("segment")!.isNotEmpty ||
+            shared_pr.getString("segment") != null) {
+          segment = shared_pr.getString("segment")!;
         } else {
           segment = segementSelect;
         }

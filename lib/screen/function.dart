@@ -318,7 +318,7 @@ class _SegmentDropdownState extends State<SegmentDropdown> {
     if (widget.controller.isEmpty) {
       widget.controller = SEGMENT_LIST[3];
     } else {
-      shared_pr.setString(Conf.segment.toString(), widget.controller);
+      shared_pr.setString("segment", widget.controller);
     }
     super.initState();
   }
@@ -339,7 +339,7 @@ class _SegmentDropdownState extends State<SegmentDropdown> {
             segment = newValue;
             if (segment != null || segment!.isNotEmpty) {
               widget.controller = segment!;
-              shared_pr.setString(Conf.segment.toString(), segment!);
+              shared_pr.setString("segment", segment!);
             }
           });
         },
@@ -524,7 +524,7 @@ class _GroupDropdownState extends State<GroupDropdown> {
     if (widget.controller.isEmpty) {
       widget.controller = SEGMENT_LIST[1];
     } else {
-      shared_pr.setString(Conf.group.toString(), widget.controller);
+      shared_pr.setString("group", widget.controller);
     }
     super.initState();
   }
@@ -544,7 +544,7 @@ class _GroupDropdownState extends State<GroupDropdown> {
           setState(() {
             group = newValue;
             if (group != null || group!.isNotEmpty) {
-              shared_pr.setString(Conf.group.toString(), group!);
+              shared_pr.setString("group", group!);
               widget.controller = group!;
             }
           });
@@ -594,10 +594,10 @@ class _DeviceDropdownState extends State<DeviceDropdown> {
         onChanged: (MediaDeviceInfo? newValue) {
           setState(() {
             if (widget.type == 'video') {
-              shared_pr.setString(Conf.videoDev.toString(), newValue!.label);
+              shared_pr.setString("videoDev", newValue!.label);
             }
             if (widget.type == 'audio') {
-              shared_pr.setString(Conf.audioDev.toString(), newValue!.label);
+              shared_pr.setString("audioDev", newValue!.label);
             }
             widget.selected_device = newValue!;
           });
@@ -663,7 +663,7 @@ class _ResluationDropDownState extends State<ResluationDropDown> {
       widget.selectedResolution = '426x240';
     } else {
       shared_pr.setString(
-          Conf.resolution.toString(), widget.selectedResolution);
+          "resolution", widget.selectedResolution);
     }
   }
 
@@ -689,9 +689,9 @@ class _ResluationDropDownState extends State<ResluationDropDown> {
           setState(() {});
           if (selectedres != null || selectedres!.isNotEmpty) {
             widget.selectedResolution = selectedres!;
-            shared_pr.setString(Conf.resolution.toString(), selectedres!);
+            shared_pr.setString("resolution", selectedres!);
           }
-          print('the res is ${shared_pr.get(Conf.resolution.toString())}');
+          print('the res is ${shared_pr.get("resolution")}');
 
           // if (newValue != null) {
           //   setState(() {

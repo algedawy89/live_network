@@ -64,9 +64,9 @@ class _FilesState extends State<Files> {
       });
 
       try {
-        if (shared_pr.getString(Conf.resolution.toString())!.isNotEmpty ||
-            shared_pr.getString(Conf.resolution.toString()) != null) {
-          selectedResolution = shared_pr.getString(Conf.resolution.toString())!;
+        if (shared_pr.getString("resolution")!.isNotEmpty ||
+            shared_pr.getString("resolution") != null) {
+          selectedResolution = shared_pr.getString("resolution")!;
         } else {
           selectedResolution = '640x360';
         }
